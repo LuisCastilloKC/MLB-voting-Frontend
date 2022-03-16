@@ -1,6 +1,6 @@
 export const updatePlayerName = (playerName) => {
     return (dispatch) => {
-        fetch(`http://localhost:3000/player_names/${playerName.id}`,{
+        fetch(`https://stormy-ridge-71833.herokuapp.com/player_names/${playerName.id}`,{
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
@@ -15,7 +15,7 @@ export const updatePlayerName = (playerName) => {
 
 export const addPlayer = playerName => {
     return dispatch =>{ 
-    fetch('http://localhost:3000/player_names', {
+    fetch('https://stormy-ridge-71833.herokuapp.com/player_names', {
         method: 'POST', 
         body: JSON.stringify(playerName),
         headers: { 'content-Type': 'application/json' }
